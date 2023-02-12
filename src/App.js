@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import AboutMe from './components/AboutMe/AboutMe';
+
+
+const myData = {
+ picture: "/assets/img/kucingkardus.jpg",
+ name: "Jungkook BTS",
+ description: "I'm a member of BTS"
+}
+
+const myData2 = {
+ picture: "/assets/img/kucingkardus.jpg",
+ name: "Jamal bin Meng",
+ description: "Aku kucing loh"
+}
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <AboutMe user={myData} />
+       <AboutMe user={myData2} />
       </header>
     </div>
   );
-}
+ }
+
 
 export default App;
